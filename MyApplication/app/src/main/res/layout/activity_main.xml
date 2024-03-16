@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Conversion Type Spinner -->
+    <TextView
+        android:id="@+id/conversion_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERSION TYPE:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/conversion_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conversion_type_label"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Source Unit and Value -->
+    <TextView
+        android:id="@+id/source_unit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT SOURCE UNIT AND VALUE:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/conversion_type_spinner"/>
+
+    <EditText
+        android:id="@+id/source_value_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/source_unit_label"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Value"
+        android:inputType="numberDecimal"/>
+
+    <Spinner
+        android:id="@+id/source_unit_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/source_value_edittext"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Destination Unit -->
+    <TextView
+        android:id="@+id/destination_unit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET DESTINATION UNIT:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/source_unit_spinner"/>
+
+    <Spinner
+        android:id="@+id/destination_unit_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destination_unit_label"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Convert Button -->
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destination_unit_spinner"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="CONVERT"/>
+
+    <!-- Converted Value Display -->
+    <TextView
+        android:id="@+id/converted_value_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@id/convert_button"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+
